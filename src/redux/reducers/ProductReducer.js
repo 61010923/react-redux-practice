@@ -28,3 +28,12 @@ export const selectedProductReducer = (state = {}, { type, payload }) => {
       return state;
   }
 };
+// eslint-disable-next-line default-param-last
+export const AddToCardReducer = (state = [], { type, payload }) => {
+  switch (type) {
+    case ActionTypes.ADD_PRODUCT_TO_CARD:
+      return [...state, payload];
+    default:
+      return state;
+  }
+};
