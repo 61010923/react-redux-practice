@@ -6,6 +6,8 @@ import { setProducts } from "../redux/actions/ProductActions";
 
 function ProductListing() {
   const products = useSelector((state) => state);
+  const cart = useSelector((state) => state.cart);
+  console.log(cart);
   const dispatch = useDispatch();
   const fetchProducts = async () => {
     const response = await axios.get("https://fakestoreapi.com/products")

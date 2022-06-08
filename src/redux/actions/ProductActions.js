@@ -12,7 +12,18 @@ export const selectedProduct = (product) => ({
 export const removeSelectedProduct = () => ({
   type: ActionTypes.REMOVE_SELECTED_PRODUCT,
 });
-export const addProductToCard = (product) => ({
-  type: ActionTypes.ADD_PRODUCT_TO_CARD,
+export const addProductToCart = (product) => ({
+  type: ActionTypes.ADD_PRODUCT_TO_CART,
   payload: product,
+});
+export const removeProductToCart = (product) => ({
+  type: ActionTypes.REMOVE_PRODUCT_TO_CART,
+  payload: product,
+});
+export const removeProduct = (product) => ({
+  type: ActionTypes.REMOVE_PRODUCT,
+  payload: product,
+});
+export const removeAll = () => ({
+  type: ActionTypes.REMOVE_PRODUCT_ALL,
 });
