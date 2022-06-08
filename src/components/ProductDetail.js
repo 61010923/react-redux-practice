@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { removeSelectedProduct, selectedProduct } from "../redux/actions/ProductActions";
+import { addProductToCart, removeSelectedProduct, selectedProduct } from "../redux/actions/ProductActions";
 
 function ProductDetail() {
   const { productId } = useParams();
@@ -29,6 +29,10 @@ function ProductDetail() {
       <div>loading...</div>
       )}
       <div>{product.title}</div>
+      <img src={product.image} alt={product.title} style={{ width: "100px" }} />
+      <p>{product.description}</p>
+      <button type="submit" onClick={() => dispatch(addProductToCart(product))}>add</button>
+
     </>
   );
 }
