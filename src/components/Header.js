@@ -7,7 +7,9 @@ function Header() {
   const total = products.reduce((sum, initialValue) => sum + initialValue.qty, 0);
   return (
     <div className="">
-      <h2>New shop</h2>
+      <Link to="/">
+        <h2>New shop</h2>
+      </Link>
       <Link to="/cart">
         <h2>
           cart (

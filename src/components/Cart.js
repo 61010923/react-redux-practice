@@ -10,8 +10,16 @@ function Cart() {
   const total = products.reduce((sum, initialValue) => sum + initialValue.qty * initialValue.price, 0);
   return (
     <>
-      <h1>{total}</h1>
-      <button type="submit" onClick={() => { dispatch(removeAll()); }}>remove all</button>
+      {total !== 0 && (
+      <div>
+        <h1>
+          total:
+          {" "}
+          {total}
+        </h1>
+        <button type="submit" onClick={() => { dispatch(removeAll()); }}>remove all</button>
+      </div>
+      )}
 
       {products.map((item) => (
         <div key={item.id}>
