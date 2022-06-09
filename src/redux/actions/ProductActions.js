@@ -27,3 +27,10 @@ export const removeProduct = (product) => ({
 export const removeAll = () => ({
   type: ActionTypes.REMOVE_PRODUCT_ALL,
 });
+export const alertSnackbar = (message) => ({
+  type: ActionTypes.ALERT_SNACKBAR,
+  payload: message,
+});
+export const alertSnackbarOff = () => ({
+  type: ActionTypes.ALERT_SNACKBAR_OFF,
+});

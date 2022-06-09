@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import ProductComponent from "./ProductComponent";
-import { setProducts } from "../redux/actions/ProductActions";
+import { setProducts } from "../../redux/actions/ProductActions";
 
 function ProductListing() {
   const products = useSelector((state) => state);
@@ -19,9 +19,7 @@ function ProductListing() {
     fetchProducts();
   }, []);
   return (
-    <div className="ui">
-      <ProductComponent />
-    </div>
+    <ProductComponent />
   );
 }
 
