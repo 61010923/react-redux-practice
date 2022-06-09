@@ -89,16 +89,16 @@ export const CartLink = styled(Link)`
 
     &:hover {
         color: white;
-        text-shadow: 0 0 10px pink,
-        0 0 20px pink,
-        0 0 40px pink,
-        0 0 80px pink,
-        0 0 100px pink,
-        0 0 120px pink,
-        0 0 160px pink;
+        text-shadow: 0 0 10px #2196f3,
+        0 0 20px #2196f3,
+        0 0 40px #2196f3,
+        0 0 80px #2196f3,
+        0 0 100px #2196f3,
+        0 0 120px #2196f3,
+        0 0 160px #2196f3;
         transform : translateY(-5px);
         ${CartItem} {
-            color: white
+            color: white;
         }
       }
 `;

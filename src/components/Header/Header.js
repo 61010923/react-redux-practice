@@ -16,6 +16,7 @@ import {
   CartLink,
   CartItem,
 } from "./headerStyle";
+import ShoppingImg from "../image/shoping.png";
 
 function Header() {
   const products = useSelector((state) => state.cart);
@@ -25,7 +26,7 @@ function Header() {
     <NavbarContainer extendNavbar={extendNavbar}>
       <NavbarInnerContainer>
         <LeftContainer>
-          <Logo src="https://cdn-icons.flaticon.com/png/512/869/premium/869441.png?token=exp=1654753137~hmac=cc6574bfd94e4d19d70c8b96112d42a1" />
+          <Logo src={ShoppingImg} />
         </LeftContainer>
         <RightContainer>
           <NavbarLinkContainer>
