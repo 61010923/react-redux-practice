@@ -12,6 +12,7 @@ export const InnerProductContainer = styled.div`
     margin-bottom: 40px;
     width: 80%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 `;

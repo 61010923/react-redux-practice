@@ -57,3 +57,15 @@ export const AddToCartReducer = (state = [], { type, payload }) => {
       return state;
   }
 };
+
+// eslint-disable-next-line default-param-last
+export const SnackbarReducer = (state = { open: false, message: "", severity: "" }, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.ALERT_SNACKBAR:
+      return payload;
+    case ActionTypes.ALERT_SNACKBAR_OFF:
+      return { open: false, message: "", severity: "" };
+    default:
+      return state;
+  }
+};

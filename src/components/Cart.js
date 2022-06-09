@@ -11,7 +11,7 @@ function Cart() {
   return (
     <>
       {total !== 0 && (
-      <div>
+      <div style={{ marginTop: "100px" }}>
         <h1>
           total:
           {" "}

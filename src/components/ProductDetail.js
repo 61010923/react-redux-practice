@@ -23,7 +23,7 @@ function ProductDetail() {
     return () => dispatch(removeSelectedProduct());
   }, [productId]);
   return (
-    <>
+    <div style={{ marginTop: "100px" }}>
       {/* product is empty */}
       {Object.keys(product).length === 0 && (
       <div>loading...</div>
@@ -33,7 +33,7 @@ function ProductDetail() {
       <p>{product.description}</p>
       <button type="submit" onClick={() => dispatch(addProductToCart(product))}>add</button>
 
-    </>
+    </div>
   );
 }
 
