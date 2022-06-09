@@ -24,6 +24,7 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "import/prefer-default-export": "off",
         "no-unused-vars": "off",
-        "max-len": 0
+        "max-len": 0,
+        "react/react-in-jsx-scope": "off"
     }
 }
