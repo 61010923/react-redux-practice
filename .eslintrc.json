@@ -25,6 +25,7 @@
         "import/prefer-default-export": "off",
         "no-unused-vars": "off",
         "max-len": 0,
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "no-console": "off"
     }
 }
