@@ -35,7 +35,6 @@ function Header() {
       navigate("/login");
     }, 3000);
   };
-  console.log({ username, isLogin });
   return (
     <NavbarContainer extendNavbar={extendNavbar}>
       <NavbarInnerContainer>
