@@ -11,6 +11,8 @@ import ProductListing from "./components/Product/ProductListing";
 import ProductDetail from "./components/ProductDetail";
 import Cart from "./components/Cart";
 import CustomizedSnackbars from "./components/Snackbar/Snackbar";
+import { Login } from "./components/Login/Login";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -19,7 +21,11 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<ProductListing />} />
-        <Route path="/cart" element={<Cart />} />
+        {/* <Route path="/cart" element={<Cart />} /> */}
+        <Route path="/cart" element={<PrivateRoute />}>
+          <Route path="/cart" element={<Cart />} />
+        </Route>
+        <Route path="/login" element={<Login />} />
         <Route path="/product/:productId" element={<ProductDetail />} />
       </Routes>
     </Router>

@@ -34,3 +34,14 @@ export const alertSnackbar = (message) => ({
 export const alertSnackbarOff = () => ({
   type: ActionTypes.ALERT_SNACKBAR_OFF,
 });
+
+export const login = (username) => ({
+  type: ActionTypes.LOGIN,
+  payload: username,
+});
+
+export const logout = () => (
+  {
+    type: ActionTypes.LOGOUT,
+  }
+);
