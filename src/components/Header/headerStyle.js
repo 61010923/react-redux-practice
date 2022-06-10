@@ -7,6 +7,7 @@ export const NavbarContainer = styled.nav`
     left: 0;
     width: 100%;
     transition: 0.5s;
+    z-index: 2;
     height: ${(props) => (props.extendNavbar ? "100vh" : "80px")};
     background-color: ${(props) => (props.extendNavbar ? "rgba(0,0,0,0.9)" : "black")};
     display: flex;
@@ -42,6 +43,28 @@ export const NavbarLinkContainer = styled.div`
     align-items: center;
 `;
 export const NavbarLink = styled(Link)`
+    color: white;
+    font-size: x-large;
+    text-decoration: none;
+    margin: 10px;
+    transition: 0.5s;
+    &:hover {
+        color: white;
+        text-shadow: 0 0 10px pink,
+        0 0 20px pink,
+        0 0 40px pink,
+        0 0 80px pink,
+        0 0 100px pink,
+        0 0 120px pink,
+        0 0 160px pink;
+        transform : translateY(-5px);
+      }
+    @media (max-width: 700px) {
+        display: none;
+    }
+`;
+export const LoginLink = styled.div`
+    cursor: pointer;
     color: white;
     font-size: x-large;
     text-decoration: none;

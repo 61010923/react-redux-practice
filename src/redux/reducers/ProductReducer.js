@@ -69,3 +69,15 @@ export const SnackbarReducer = (state = { open: false, message: "", severity: ""
       return state;
   }
 };
+
+// eslint-disable-next-line default-param-last
+export const loginReducer = (state = { username: "", isLogin: false }, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.LOGIN:
+      return { ...state, username: payload.username, isLogin: true };
+    case ActionTypes.LOGOUT:
+      return { username: "", isLogin: false };
+    default:
+      return state;
+  }
+};
