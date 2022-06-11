@@ -13,15 +13,16 @@ import Cart from "./components/Cart";
 import CustomizedSnackbars from "./components/Snackbar/Snackbar";
 import { Login } from "./components/Login/Login";
 import PrivateRoute from "./components/PrivateRoute";
+import Test from "./components/Test/Test";
 
 function App() {
   return (
     <Router>
       <CustomizedSnackbars />
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<ProductListing />} />
-        {/* <Route path="/cart" element={<Cart />} /> */}
+        <Route path="/test" element={<Test />} />
         <Route path="/cart" element={<PrivateRoute />}>
           <Route path="/cart" element={<Cart />} />
         </Route>
